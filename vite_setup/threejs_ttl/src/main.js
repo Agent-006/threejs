@@ -79,8 +79,8 @@ scene.add(directionalLight);
 const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
 scene.add(ambientLight);
 
-const pointLight = new THREE.PointLight(0xffffff, 1, 100);
-pointLight.position.set(0, 5, 0);
+const pointLight = new THREE.PointLight(0xffffff, 1, 100, 2);
+pointLight.position.set(.4, -1, 1);
 scene.add(pointLight);
 
 const highIntensityLightHelper = new THREE.DirectionalLightHelper(
@@ -95,7 +95,7 @@ const directionalLightHelper = new THREE.DirectionalLightHelper(
 );
 scene.add(directionalLightHelper);
 
-const pointLightHelper = new THREE.PointLightHelper(pointLight, 5);
+const pointLightHelper = new THREE.PointLightHelper(pointLight, 3);
 scene.add(pointLightHelper);
 
 function animate() {
